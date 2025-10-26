@@ -12,15 +12,19 @@
     h1, h2 {
       text-align: center;
     }
+    .playlist_container {
+      max-width: 400px;
+      margin: 0 auto 32px auto;
+    }
     ul {
       padding: 0;
-      margin: 32px auto 18px auto;
-      max-width: 380px;
+      margin: 0;
+      margin-top: 26px;
     }
     li {
       list-style-type: none;
+      font-size: 1.08em;
       padding: 7px 0;
-      font-size: 1.07em;
     }
     a {
       text-decoration-line: none;
@@ -60,9 +64,31 @@
   <h2>Now Playing...</h2>
   <h2>MP3 songs</h2>
   
-  <!-- Songs Playlist -->
-  <ul>
-    <li><a href="https://www.pagalworld.com.se/files/download/id/64630" target="_blank">Main Rang Sharbaton Ka</a></li>
-    <li><a href="https://www.pagalworld.com.se/files/download/id/64630" target="_blank">Sun Saathiya</a></li>
-    <li><a href="https://www.pagalworld.com.se/files/download/id/64630" target="_blank">Kabira</a></li>
-    <li><a href="
+  <!-- Playlist songs wrapped in a div for Cypress -->
+  <div class="playlist_container">
+    <ul>
+      <li><a href="https://www.pagalworld.com.se/files/download/id/64630" target="_blank">Main Rang Sharbaton Ka</a></li>
+      <li><a href="https://www.pagalworld.com.se/files/download/id/64630" target="_blank">Sun Saathiya</a></li>
+      <li><a href="https://www.pagalworld.com.se/files/download/id/64630" target="_blank">Kabira</a></li>
+      <li><a href="https://www.pagalworld.com.se/files/download/id/64630" target="_blank">Senorita</a></li>
+      <li><a href="https://www.pagalworld.com.se/files/download/id/64630" target="_blank">Tum Hi Ho</a></li>
+    </ul>
+  </div>
+  
+  <!-- Audio Player in required div -->
+  <div class="player_one">
+    <audio controls>
+      <source src="https://www.pagalworld.com.se/files/download/id/64630" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  
+  <!-- Video Player in required div -->
+  <div class="player_two">
+    <video controls>
+      <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</body>
+</html>
